@@ -1,0 +1,84 @@
+.indexPage{
+  overflow: hidden;
+  min-height: 680px;
+  height: 100%;
+  background: url("../img/s-bg.png")no-repeat center top;
+  background-size: 100% 100%;
+  .pageTop{
+    display: flex;
+    // background: white;
+    // box-shadow: 0px 2px 3px 0px rgba(179, 183, 201, 1);
+    // .headerLoge{
+    //   cursor: pointer;
+    //   height: 1rem;
+    //   width: 25%;
+    //   line-height: 1rem;
+    //   text-align: center;
+    //   font-weight: bold;
+    //   font-size: 24px;
+    //   color: #0E90FE;
+    // }
+    .header {
+      height: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      .span {
+        margin: 0 .2rem;
+      }
+      .user_img {
+        height: .6rem;
+        width: .6rem;
+        border: .01rem solid #003ECB;
+        background: #FFF;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .user_setting,.user_outting{
+        font-weight: 800;
+        color: #777C82;
+        font-family: MicrosoftYaHei;
+      }
+      .user_outting{
+        margin-right: 2rem
+      }
+    }
+  }
+  .pageTitle{
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 61px;
+    margin-bottom: 99px;
+  }
+  .el-row{
+    .el-col{
+      margin-top: 10px;
+      .grid-content{
+        text-align: center;
+        font-size: 20px;
+        font-weight:bold;
+        color: white;
+        overflow: hidden;
+        i,span{
+          display: block;
+        }
+        i{
+          width: 70px;
+          height: 70px;
+          margin: 31px auto 28px;
+        }
+        span{
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .labelBG{
+    background: rgba(1,57,245,0.5);
+  }
+  .lastLabel{
+    background: rgba(1,57,183,0);
+  }
+}

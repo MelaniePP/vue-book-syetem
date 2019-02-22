@@ -1,0 +1,171 @@
+/**
+ * description: 全局项目色彩控制
+ * create_time: 2018-10-12
+ * message: 请不要吐槽我的样式
+ */
+@EDEDED: #EDEDED;
+@2DC3E8: #2DC3E8;
+@FFFFFF: #FFFFFF;
+@F3F3F3: #F3F3F3;
+@333333: #333333;
+
+@E9EAF0: #E9EAF0;
+@E9EAF0: #E9EAF0;
+.bodyBG{background: @E9EAF0;}
+.headerBG{background: @2DC3E8}
+.barBG{background: @FFFFFF}
+// 阴影
+// 常规标签通用样式
+*{margin: 0;padding: 0}
+body,html{border:none;width: 100%;height: 100%;font-family: '黑体'; font-size: 12px;color: #2c3e50;}
+img{max-height: 100%;font-size: 0}
+ul li{list-style: none;}
+#app {width: 100%;height: 100%; .bodyBG}
+#app>#init{.con}
+.content{background: @FFFFFF;margin-top: 20px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);}
+.con{height: 100%;}
+.spanListBar{padding: 2px 4px;}
+.spanListBar:after{content:","}
+.spanListBar:last-child:after{content:""}
+.btn{cursor: pointer}
+// 布局样式
+.flex {display: flex;align-items: center;}
+.flex-wrap{flex-wrap: wrap;}
+.justify-content{display: flex;justify-content: center;}
+.flex-0-auto{display:flex;align-items: center;justify-content:space-between}
+.auto{position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
+
+// 父组件init(项目架构样式文件)
+
+#init {
+  // 左侧菜单项
+  .leftBar {
+    overflow: hidden;
+    background: #1791FF;
+    height: 100%;
+    width: 16%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    .logo {
+      height: 1rem;
+      cursor: pointer;
+      .logo_txt {
+        height: .4rem;
+        line-height: .4rem;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+      }
+    }
+    // 菜单项
+    .nav {
+      background: #001528;
+      color: #A5AFB8;
+      height: 100%;
+      .nav-item:nth-of-type(1) {
+        border-top: 1px solid #E6E9F5;
+      }
+
+      // 父级菜单
+      .nav-item {
+        border-bottom: .01rem solid #E6E9F5;
+        height: auto;
+        line-height: 1rem;
+        color: #FFF;
+        cursor: pointer;
+        text-indent: .4rem;
+      }
+      // 有图表的菜单
+      .nav_ico {
+        width: .5rem;
+        display: inline-block;
+        height: .3rem;
+        line-height: .3rem;
+      }
+      .nav_txt {
+        font-weight: 500;
+        font-size: .25rem;
+        color: rgba(255, 255, 255, 1);
+      }
+      // 子才当集合
+      .nav_sub_ul {
+        box-shadow: inset 5px -5px 15px -5px #ccc, inset 5px 5px 15px -5px #ccc;
+      }
+      // 单项子菜单
+      .nav_sub_item {
+        background: #E6E9F5;
+        opacity: .9;
+        border-bottom: .01rem solid #CCC;
+        border-top: .01rem solid #E6E9F5;
+        span {
+          color: #5C6366;
+        }
+      }
+      .nav_sub_item:hover {
+        background: #D0E0F8;
+      }
+      .nav_sub_item:nth-last-child(1) {
+        border-bottom: none;
+      }
+      .activeSubNav {
+        border-right: .1rem solid #0962F4;
+        span {
+          color: #0962F4;
+        }
+      }
+    }
+  }
+  // 右侧内容路由填充区域
+  .rightBar {
+    height: 100%;
+    width: 84%;
+    overflow: auto;
+    // 右侧内容顶部header部分
+    .header {
+      height: 1rem;
+      width: 100%;
+      background: white;
+      box-shadow: 0px 2px 3px 0px rgba(179, 183, 201, 1);
+      display: flex;
+      justify-content: flex-end;
+      .span {
+        margin: 0 .2rem;
+      }
+      .user_img {
+        height: .6rem;
+        width: .6rem;
+        background: #FFF;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .user_setting,.user_outting{
+        font-weight: 800;
+        color: #777C82;
+        font-family: MicrosoftYaHei;
+      }
+      .user_outting{
+        margin-right: 2rem
+      }
+    }
+  }
+// 
+@0468FB: #0468FB;
+@909399: red;
+@FFF: #000000;
+@FFFFFF: #FFFFFF;
+.el-menu{background: none;border-right: none;}
+// .el-menu--inline{
+//   .is-active{background-color: @FFFFFF;opacity: .8;color: @0468FB;box-shadow: 0 0 10px 0 rgba(0,0,0,.2);}
+//   .el-menu-item:hover{background-color: @FFFFFF;opacity: .8;color: @0468FB;}
+// }
+// .el-menu-item{border-bottom: 1px solid @909399;border:none}
+// .el-submenu__title:hover .nav_icon{color: @0468FB;}
+// .el-menu-item:nth-last-child(1){border: none}
+// .el-menu li:hover{background: none}
+.el-menu-item-group__title{padding: 0;}
+.el-submenu__title:hover,.el-menu-item:hover {background-color: rgba(0,0,0,0.7);opacity: .8;color: @0468FB;}
+.el-menu-item:focus{outline: 0;background-color: rgba(23,145,255,0.2);color: @FFFFFF;}
+.el-submenu__title,.el-menu-item{color: #A5AFB8;}
+.el-menu-item-group{background-color: #000000;}
+}
