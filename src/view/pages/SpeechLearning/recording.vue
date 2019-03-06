@@ -25,7 +25,7 @@
         <!-- 录音 -->
         <div class="audio-content"><audio src="" controls="controls"></audio></div>
         <!-- 表格 -->
-        <el-table :data="tableData" height="355"> 
+        <el-table :data="tableData" height="330"> 
           <el-table-column  prop="Number" label="编号"></el-table-column>
           <el-table-column  prop="title" label="标题"></el-table-column>
           <el-table-column  prop="time" label="拨打时间"></el-table-column>

@@ -7,8 +7,14 @@ import store from './store'
 // 引入elementUI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// 引入echarts
+import echarts from 'echarts'
 // 使用elementUI
 Vue.use(ElementUI);
+
+// 使用echarts
+Vue.prototype.$echarts = echarts 
+
 /*
  * 定义常量
  */
