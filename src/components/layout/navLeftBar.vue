@@ -2,7 +2,7 @@
   <div class='menuLeftBar'>
     <div class="logo flex"><div class="logo_txt">智能培训平台</div></div>
     <div class="nav">
-      <el-menu :default-openeds="['0']">
+      <el-menu :default-openeds="['0']" unique-opened>
         <el-menu-item index="0-1" @click="routerPage('首页')">首页</el-menu-item>
         <el-menu-item index="0" @click="routerPage('模拟训练')"><i class="el-icon-menu iconfont icon-kongzhi"></i>模拟训练</el-menu-item>
         <el-submenu index="1">
@@ -16,9 +16,11 @@
           <template slot="title"><i class="el-icon-menu iconfont icon-tuceng"></i>统计分析</template>
           <el-menu-item-group>
             <el-menu-item index="2-1" @click="routerPage('个人成绩')">个人成绩</el-menu-item>
-            <el-menu-item index="2-2" @click="routerPage('作业管理')">作业管理</el-menu-item>
-            <el-menu-item index="2-3" @click="routerPage('历史纪录')">历史纪录</el-menu-item>
-            <el-menu-item index="2-4" @click="routerPage('新坐席时常')">新坐席时常</el-menu-item>
+             <el-menu-item index="2-2" @click="routerPage('班级成绩')">班级成绩</el-menu-item>
+            <el-menu-item index="2-3" @click="routerPage('作业管理')">作业管理</el-menu-item>
+            <el-menu-item index="2-4" @click="routerPage('历史纪录')">历史纪录</el-menu-item>
+            <el-menu-item index="2-5" @click="routerPage('新坐席时常')">新坐席时常</el-menu-item>
+            <el-menu-item index="2-6" @click="routerPage('班级管理')">班级管理</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="3">
@@ -88,26 +90,42 @@
           this.$router.push({name: 'recording'});
         }else if(page=='个人成绩'){
           this.$router.push({name: 'grade'});
+        }else if(page=='班级成绩'){
+          this.$router.push({name: 'gradeclass'});
         }else if(page=='作业管理'){
           this.$router.push({name: 'composition'});
         }else if(page=='历史纪录'){
           this.$router.push({name: 'record'});
         }else if(page=='新坐席时常'){
           this.$router.push({name: 'AgentOften'});
+        }else if(page=='班级管理'){
+          this.$router.push({name: 'classManage'});
         }else if(page=='问题管理'){
           this.$router.push({name: 'problem'});
+        }else if(page=='新建问题'){
+          this.$router.push({name: 'ProblemTable'});
         }else if(page=='场景管理'){
           this.$router.push({name: 'Scenes'});
+        }else if(page=='场景管理'){
+          this.$router.push({name: 'ScenceBg'});
         }else if(page=='场景预设'){
           this.$router.push({name: 'ScenePreset'});
+        }else if(page=='新建操作场景'){
+          this.$router.push({name: 'ScenePreset'});
+        }else if(page=='新建操作场景1'){
+          this.$router.push({name: 'secenesSeled'});
         }else if(page=='用户管理'){
           this.$router.push({name: 'User'});
         }else if(page=='基础字段设置'){
           this.$router.push({name: 'BaseField'});
         }else if(page=='权限管理'){
           this.$router.push({name: 'permission'});
+        }else if(page=='权限新增'){
+          this.$router.push({name: 'rolemange'});
         }else if(page=='录音资料管理'){
           this.$router.push({name: 'RecordingMaterial'});
+        }else if(page=='新增录音资料'){
+          this.$router.push({name: 'videoMange'});
         }
       },
     },

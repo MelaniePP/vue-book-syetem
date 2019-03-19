@@ -7,7 +7,7 @@
     <form class="loginForm auto">
       <p class="title">账户密码登录</p>
       <div class="inputLoginName"><span class="inputLoginNameIcon"></span><input type="text" id="inputLoginName" v-model="inputLoginUserName" placeholder="请输入用户名"></div>
-      <div class="inputLoginPass"><span class="inputLoginPassIcon"></span><input type="text" id="inputLoginPass" v-model="inputLoginUserPass" placeholder="请输入登录密码"></div>
+      <div class="inputLoginPass"><span class="inputLoginPassIcon"></span><input type="text" id="inputLoginPass" v-model="inputLoginUserPass" placeholder="请输入登录密码" @keyup.enter="enter"></div>
       <div class="loginSystem" @click="handleLogin()">登录</div>
     </form>
   </div>
@@ -44,6 +44,10 @@
           type: 'warning'
         });
       },
+      enter(){
+        // alert(1)
+        this.$router.push('/indexPage')
+      }
     },
     // 离开路由的操作
     destroyed() {
