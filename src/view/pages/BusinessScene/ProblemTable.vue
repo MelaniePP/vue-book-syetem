@@ -112,6 +112,7 @@ export default {
           let storage = window.localStorage
           let newmsg = JSON.stringify(this.ruleForm)
           storage.setItem('num'+this.id,newmsg)
+          this.$router.push({name:'problem'})
         } else {
           console.log('error submit!!')
           // return false

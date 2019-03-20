@@ -205,7 +205,8 @@ export default {
           let storage = window.localStorage
           let newmsg = JSON.stringify(this.form)
           storage.setItem('sceNum' + this.id, newmsg)
-          console.log(this.form.type)
+          // console.log(this.form.type)
+          this.$router.push({name:'Scenes'})
         } else {
           console.log('error submit!!')
           // return false

@@ -11,21 +11,21 @@
             <el-input v-model="value1"></el-input>
           </el-form-item>
             <el-form-item label="活动名称">
-            <el-input v-model="value1"></el-input>
+            <el-input v-model="value2"></el-input>
           </el-form-item>
             <el-form-item label="活动名称">
-            <el-input v-model="value1"></el-input>
+            <el-input v-model="value3"></el-input>
           </el-form-item>
-          <el-select v-model="value1" placeholder="请选择活动区域">
+          <el-select v-model="value4" placeholder="请选择活动区域">
             <el-option label="区域一" value="shanghai"></el-option>
             <el-option label="区域二" value="beijing"></el-option>
           </el-select>
-          <el-select v-model="value1" placeholder="请选择活动区域">
+          <el-select v-model="value5" placeholder="请选择活动区域">
             <el-option label="区域一" value="shanghai"></el-option>
             <el-option label="区域二" value="beijing"></el-option>
           </el-select>
           <el-form-item label="活动名称">
-            <el-input v-model="value1"></el-input>
+            <el-input v-model="value6"></el-input>
           </el-form-item>
           <!-- 文件上传 -->
           <el-upload
@@ -52,6 +52,11 @@ export default {
   data() {
     return {
       value1: '',
+      value2: '',
+      value3: '',
+      value4: '',
+      value5: '',
+      value6: '',
        fileList3: [{
           name: 'food.jpeg',
           url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
@@ -66,6 +71,9 @@ export default {
         this.fileList3 = fileList.slice(-3);
       },
       backShift(){
+        this.$router.push({name:'RecordingMaterial'})
+      },
+      submitForm(){
         this.$router.push({name:'RecordingMaterial'})
       }
   }

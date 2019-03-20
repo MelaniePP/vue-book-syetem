@@ -219,7 +219,8 @@ export default {
     line-height: 700px;
     img{
       position: absolute;
-      top:38%;
+      // top:36%;
+      top:300px;
       left: 20%;
       width: 110px;
     }

@@ -3,10 +3,10 @@
       <el-row>
       <el-col :span="22" :offset="1">
             <!-- 标签 -->
-          <div class="taphead" v-if = "visvibale">
+          <div class="taphead" v-if = "visvibale" @mouseenter="enter(index)">
             <p class="sanjiaoup" v-if = "current1"></p>
             <p class="sanjiaodown" v-if = "current2"></p>
-            <div class="basemsg">
+            <div class="basemsg" >
               <h1>基本信息</h1>
               <p>
                 <span>场景名称</span>
@@ -107,7 +107,7 @@ export default {
       }, 0)
     },
     leave(index) {
-      //  this.visvibale = false
+       this.visvibale = false
     },
     next() {
       // alert(1)

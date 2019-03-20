@@ -16,7 +16,6 @@
           show-checkbox
           default-expand-all=true
           node-key="id"
-          :ref="tree"
           highlight-current
           :props="defaultProps">
       </el-tree>
@@ -257,9 +256,18 @@ export default {
       }
     }
   },
-  methods:{
-    backShift(){
-      this.$router.push({name:'permission'})
+  methods: {
+    backShift() {
+      this.$router.push({ name: 'permission' })
+    },
+    submitForm() {
+      this.$router.push({ name: 'permission' })
+    },
+    resetForm(ruleForm){
+      // alert(1)
+      console.log(ruleForm);
+
+      this.$refs[ruleForm].resetFields();
     }
   }
 }
@@ -275,16 +283,16 @@ export default {
     height: 600px;
     background: #fff;
     padding-top: 20px;
-    margin-top:20px;
+    margin-top: 20px;
     .selectBox {
       margin-left: 3%;
       background: #fff;
       width: 93%;
     }
-    .profoot{
+    .profoot {
       float: right;
       margin-top: 4%;
-      padding-right:3%;
+      padding-right: 3%;
     }
   }
 }
