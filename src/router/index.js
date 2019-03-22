@@ -21,7 +21,7 @@ const scrollBehavior = (to, from, savedPosition) => {
  *  @scrollBehavior: 配置滚动条的位置
  */
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: __dirname,
   likActiveClass: 'link-active',
   scrollBehavior,
