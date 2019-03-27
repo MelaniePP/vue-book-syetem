@@ -36,7 +36,8 @@
               @click="openFullScreen"
               v-loading.fullscreen.lock="fullscreenLoading"
               style="margin-left:8%">提交</el-button>
-          <el-button type="primary" v-if="procData!==101" @click="timer()" style="margin-left:8%">开始</el-button>
+          <el-button type="primary" v-if="count == 1" @click="stopTimer()" style="margin-left:8%">暂停</el-button>
+          <el-button type="primary" v-if="procData!==101&&count!=1" @click="timer()" style="margin-left:8%">开始</el-button>
       </div>
       <!-- 成功提示 -->
       <div class="modelbox">
@@ -57,7 +58,8 @@ export default {
       //定时器
       t: null,
       fullscreenLoading: false,
-      stepIndex:3
+      stepIndex:3,
+      count:-1
     }
   },
   methods: {
@@ -79,6 +81,12 @@ export default {
         this.procData++
         // a++
       }, 100)
+      this.count = 1
+    },
+    stopTimer(){
+        clearInterval(this.t)
+        this.t = null
+        this.count = -1
     },
     openFullScreen() {
       this.fullscreenLoading = true
@@ -109,6 +117,7 @@ export default {
           let stepTmp = 3
           stepTmp = JSON.stringify(stepTmp)
           storage.setItem('stepTmp', stepTmp)
+          this.count = -1
           // this.$emit('updata',this.stepIndex)
           // storage.getItem('stepTmp', stepTmp)
           // stepTmp = JSON.parse(stepTmp)
