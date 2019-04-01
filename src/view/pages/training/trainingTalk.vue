@@ -29,7 +29,7 @@
       <!-- 进度 -->
       <div class="process" v-if="processVisible">
           <el-progress type="circle" :percentage="procData>99?100:procData" style="margin-left:35%;margin-top:25%"></el-progress><br>
-          <el-button type="primary" style="margin-left:30%;margin-top:10%" >复位</el-button>
+          <el-button type="primary" style="margin-left:30%;margin-top:10%" @click="returnZero()">复位</el-button>
           <el-button
               type="primary"
               v-if="procData===101"
@@ -82,6 +82,12 @@ export default {
         // a++
       }, 100)
       this.count = 1
+    },
+    returnZero(){
+      clearInterval(this.t)
+      this.t = null
+      this.count = -1
+      this.procData = 0
     },
     stopTimer(){
         clearInterval(this.t)
